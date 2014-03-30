@@ -10,6 +10,16 @@
 		<param-value>YoonsungJung</param-value>	
 	</context-param>
 	
+	<context-param>
+		<param-name>breed</param-name>
+		<param-value>Great Dane</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>
+			com.headfirst.listener.MyServletContextListener
+		</listener-class>
+	</listener>
 	
 	<servlet>
 		<servlet-name>Ch3 Beer</servlet-name>
@@ -39,5 +49,15 @@
 	<servlet-mapping>
 		<servlet-name>BeerParamTests</servlet-name>
 		<url-pattern>/getInitParams</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ContextListenerTests</servlet-name>
+		<servlet-class>com.headfirst.controller.ListenerTester</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ContextListenerTests</servlet-name>
+		<url-pattern>/listenerTest</url-pattern>
 	</servlet-mapping>
 </web-app>
