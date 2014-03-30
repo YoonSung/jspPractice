@@ -60,4 +60,14 @@
 		<servlet-name>ContextListenerTests</servlet-name>
 		<url-pattern>/listenerTest</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>JarDownloaderTest</servlet-name>
+		<servlet-class>com.headfirst.controller.JarFileDownloader</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>JarDownloaderTest</servlet-name>
+		<url-pattern>/jarDownloaderTest</url-pattern>
+	</servlet-mapping>
 </web-app>
