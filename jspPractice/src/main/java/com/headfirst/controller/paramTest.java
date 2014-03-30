@@ -2,7 +2,9 @@ package com.headfirst.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,9 +18,16 @@ public class paramTest extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		String email = getServletConfig().getInitParameter("adminEmail");
+		//String email = getServletConfig().getInitParameter("adminEmail");
+		//ServletContext context = getServletConfig().getServletContext();
+		Enumeration<?> enumeration = getServletConfig().getInitParameterNames();
+		
+		
 		out.println("<html><head></head><body>");
-		out.println(email);
+		while(enumeration.hasMoreElements()) {
+			out.println(enumeration.nextElement());
+			out.println("<br/>");
+		}
 		out.println("</body></html>");
 	}
 	
