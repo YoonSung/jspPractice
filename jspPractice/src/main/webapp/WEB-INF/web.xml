@@ -2,7 +2,15 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	version="2.5"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
 	<display-name>Archetype Created Web Application</display-name>
+	
+	<context-param>
+		<param-name>adminName</param-name>
+		<param-value>YoonsungJung</param-value>	
+	</context-param>
+	
+	
 	<servlet>
 		<servlet-name>Ch3 Beer</servlet-name>
 		<servlet-class>com.headfirst.controller.BeerSelect</servlet-class>

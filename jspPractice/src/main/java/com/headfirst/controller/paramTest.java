@@ -19,7 +19,6 @@ public class paramTest extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		//String email = getServletConfig().getInitParameter("adminEmail");
-		//ServletContext context = getServletConfig().getServletContext();
 		Enumeration<?> enumeration = getServletConfig().getInitParameterNames();
 		
 		
@@ -28,6 +27,14 @@ public class paramTest extends HttpServlet {
 			out.println(enumeration.nextElement());
 			out.println("<br/>");
 		}
+		
+		out.println("<br/>");
+		out.println("<br/>");
+		
+		ServletContext servletContext = getServletContext();
+		String adminName = servletContext.getInitParameter("adminName");
+		out.println(adminName);
+		
 		out.println("</body></html>");
 	}
 	
